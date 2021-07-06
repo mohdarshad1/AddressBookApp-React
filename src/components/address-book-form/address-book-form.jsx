@@ -176,8 +176,8 @@ class AddressBookForm extends React.Component {
     if(addressValue.length === 0) {
       this.initializeMessage('address', 'Address is a Required Field!', '');
     } else {
-      const PHONE_NUMBER_REGEX = RegExp("^[A-Za-z0-9-,\\.]{3,}([\\s][A-Za-z0-9-,\\.]{3,}){0,}$");
-      if(PHONE_NUMBER_REGEX.test(addressValue)) {
+      const ADDRESS_REGEX = RegExp("^[A-Za-z0-9-,\\.]{3,}([\\s][A-Za-z0-9-,\\.]{3,}){0,}$");
+      if(ADDRESS_REGEX.test(addressValue)) {
         this.initializeMessage('address', '', '✓');
       } else {
         this.initializeMessage('address', 'Address is Invalid!', '');
@@ -350,6 +350,7 @@ class AddressBookForm extends React.Component {
                         <option value="Noida">Noida</option>
                         <option value="Ghaziabad">Ghaziabad</option>
                         <option value="Agra">Agra</option>
+                        <option value="Kotdwar">Kotdwar</option>
                         <option value="Lucknow">Lucknow</option>
                         <option value="Allahabad">Allahabad</option>
                         <option value="Kanpur">Kanpur</option>
